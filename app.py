@@ -5,8 +5,8 @@ import os
 app = Flask(__name__)
 
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
-DEFAULT_MODEL = os.getenv("OLLAMA_MODEL", "gemma3")
-TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "180"))
+DEFAULT_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
+TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "600"))
 
 MODES = {
     "explain": "Explain the code clearly, line by line where useful. Do not rewrite it unless needed to clarify.",
